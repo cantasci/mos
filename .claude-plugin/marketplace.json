@@ -1,0 +1,11 @@
+{
+  "name": "marketing-os",
+  "owner": { "name": "Can Tasci" },
+  "plugins": [
+    {
+      "name": "mos",
+      "source": "./",
+      "description": "Plan, write and produce on-brand marketing content for small businesses."
+    }
+  ]
+}
