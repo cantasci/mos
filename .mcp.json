@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "marketing-os": {
+      "type": "http",
+      "url": "${MOS_SERVER_URL:-http://localhost:8787/mcp}"
+    }
+  }
+}

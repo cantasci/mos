@@ -1,0 +1,43 @@
+{
+  "name": "mos",
+  "version": "0.2.3",
+  "description": "Plan, write and produce on-brand marketing content for small businesses: ad visuals, social posts, captions, thumbnails, LinkedIn and X posts. Layout, rendering and all quality checks run on the Marketing OS server.",
+  "commands": {
+    "brands": {
+      "source": "./commands/brands-list.md"
+    },
+    "brands:list": {
+      "source": "./commands/brands-list.md"
+    },
+    "brand:new": {
+      "source": "./commands/brand-new.md"
+    },
+    "brand:select": {
+      "source": "./commands/brand-select.md"
+    },
+    "products": {
+      "source": "./commands/products-list.md"
+    },
+    "products:list": {
+      "source": "./commands/products-list.md"
+    },
+    "product:new": {
+      "source": "./commands/product-new.md"
+    },
+    "product:select": {
+      "source": "./commands/product-select.md"
+    },
+    "visual": {
+      "source": "./commands/visual.md"
+    },
+    "text": {
+      "source": "./commands/text.md"
+    },
+    "campaign": {
+      "source": "./commands/campaign.md"
+    },
+    "formats": {
+      "source": "./commands/formats.md"
+    }
+  }
+}
