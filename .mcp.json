@@ -2,7 +2,7 @@
   "mcpServers": {
     "marketing-os": {
       "type": "http",
-      "url": "${MOS_SERVER_URL:-http://localhost:8787/mcp}"
+      "url": "${MOS_SERVER_URL:-https://marketing-os-velvet-water-867.fly.dev/mcp}"
     }
   }
 }
