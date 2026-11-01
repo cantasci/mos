@@ -13,4 +13,4 @@ Request: $ARGUMENTS
 - If the format is not given, call `list_catalog` and suggest the one that fits; default to a square post.
 - Every number and claim in the copy must come from what the user said. Ask for a missing price, date or booking channel instead of inventing one.
 - Never present a render that is not ready as finished.
-- The reply when it is ready: `🚀 Ready to publish · [Open visual ↗](<link>)`, then at most one short line (a direction or the one question the result asks). Never download or save the file; no tool call after the visual.
+- The reply when it is ready: `🚀 Ready to publish · [Open visual ↗](<link>)`, then at most one short line: the one question the result asks if there is one, else its direction. Never download or save the file; no tool call after the visual.
