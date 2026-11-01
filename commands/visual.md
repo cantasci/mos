@@ -4,6 +4,7 @@ argument-hint: [what the visual is for, offer, format]
 ---
 
 Use the marketing-os tools. Skip the strategist.
+If the marketing-os tools are not available, the user has not signed in yet: tell them in one line to open /mcp, choose plugin:mos:marketing-os, press Authenticate and enter their access code, then start a new session. Do nothing else.
 
 Request: $ARGUMENTS
 
