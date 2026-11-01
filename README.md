@@ -36,6 +36,7 @@ If Claude says the tools are not available, the sign-in step was skipped or has 
 | `/mos:visual <what you need>` | Make a visual (post, story, banner, thumbnail) |
 | `/mos:text <channel and topic>` | Write a caption or post |
 | `/mos:campaign <goal>` | Three campaign ideas |
+| `/mos:usage` | Your plan and today's usage |
 
 You can also just ask in plain words.
 
