@@ -1,7 +1,7 @@
 {
   "name": "mos",
   "version": "0.3.4",
-  "description": "On-brand marketing visuals and posts for small businesses: ad visuals, social posts and stories, banners, thumbnails, captions, LinkedIn and X posts. Copy uses only your facts; every visual is laid out, checked and reviewed on the Marketing OS server.",
+  "description": "On-brand marketing visuals and posts for small businesses: ad visuals, social posts and stories, banners, thumbnails, captions, LinkedIn and X posts. Copy uses only your facts, and every visual is checked and reviewed before you see it.",
   "author": {
     "name": "Can Tasci",
     "url": "https://github.com/cantasci"
@@ -16,8 +16,7 @@
     "linkedin",
     "small-business",
     "branding",
-    "copywriting",
-    "mcp"
+    "copywriting"
   ],
   "commands": {
     "brands": {
