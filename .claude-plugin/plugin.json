@@ -1,6 +1,6 @@
 {
   "name": "mos",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Plan, write and produce on-brand marketing content for small businesses: ad visuals, social posts, captions, thumbnails, LinkedIn and X posts. Layout, rendering and all quality checks run on the Marketing OS server.",
   "commands": {
     "brands": {
