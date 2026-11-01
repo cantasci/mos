@@ -16,8 +16,13 @@ In Claude Code:
 /plugin install mos@marketing-os
 ```
 
-Start a new session. On first use your browser opens the Marketing OS sign-in page; enter the
-access code you received.
+Then sign in once:
+
+1. Run `/mcp`, choose **plugin:mos:marketing-os** and press **Authenticate**.
+2. The Marketing OS sign-in page opens in your browser; enter the access code you received.
+3. Start a new session. Sign-in renews itself for 30 days at a time.
+
+If Claude says the tools are not available, the sign-in step was skipped or has expired; repeat it.
 
 ## Commands
 
