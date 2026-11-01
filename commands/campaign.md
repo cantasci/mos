@@ -8,7 +8,7 @@ If the marketing-os tools are not available, the user has not signed in yet: tel
 
 Request: $ARGUMENTS
 
-- If no brand is selected, set one up first.
+- The brand: use the one the user names or the selected one; set a brand up only when it is not saved yet. No separate `select` call when a tool takes the brand by name.
 - Propose three concepts, each for a different customer motivation and a different kind of idea, with exactly one offer. Show each as its headline and the idea in one line.
 - Call `check_concept_set` and tell the user plainly whether the set is publishable and what is missing (usually more photos).
 - Produce visuals only for concepts the user picks, and only after the set check.

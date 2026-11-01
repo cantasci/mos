@@ -8,7 +8,8 @@ If the marketing-os tools are not available, the user has not signed in yet: tel
 
 Request: $ARGUMENTS
 
-- If no brand is selected, set one up first.
+- The brand: pass its name to `render_visual` (`brand`) when the user names one; with one saved brand nothing is needed. No separate `select` call. Set a brand up only when it is not saved yet.
+- Write nothing to the user between tool calls; one short reply at the end.
 - If the format is not given, call `list_catalog` and suggest the one that fits; default to a square post.
 - Every number and claim in the copy must come from what the user said. Ask for a missing price, date or booking channel instead of inventing one.
 - Never present a render that is not ready as finished.
