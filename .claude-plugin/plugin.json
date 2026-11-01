@@ -1,7 +1,24 @@
 {
   "name": "mos",
-  "version": "0.3.3",
-  "description": "Plan, write and produce on-brand marketing content for small businesses: ad visuals, social posts, captions, thumbnails, LinkedIn and X posts. Layout, rendering and all quality checks run on the Marketing OS server.",
+  "version": "0.3.4",
+  "description": "On-brand marketing visuals and posts for small businesses: ad visuals, social posts and stories, banners, thumbnails, captions, LinkedIn and X posts. Copy uses only your facts; every visual is laid out, checked and reviewed on the Marketing OS server.",
+  "author": {
+    "name": "Can Tasci",
+    "url": "https://github.com/cantasci"
+  },
+  "homepage": "https://github.com/cantasci/mos#readme",
+  "repository": "https://github.com/cantasci/mos",
+  "keywords": [
+    "marketing",
+    "social-media",
+    "ad-creative",
+    "instagram",
+    "linkedin",
+    "small-business",
+    "branding",
+    "copywriting",
+    "mcp"
+  ],
   "commands": {
     "brands": {
       "source": "./commands/brands-list.md"
