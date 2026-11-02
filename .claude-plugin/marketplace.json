@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Marketing OS: on-brand marketing visuals and posts for small businesses, inside Claude Code.",
-    "version": "0.3.11"
+    "version": "0.3.12"
   },
   "plugins": [
     {
       "name": "mos",
       "source": "./",
       "description": "On-brand ad visuals, social posts and captions for small businesses, from a short request. Only your facts, no stock wording, checked and reviewed before you see it.",
-      "version": "0.3.11",
+      "version": "0.3.12",
       "author": {
         "name": "Can Tasci",
         "url": "https://github.com/cantasci"

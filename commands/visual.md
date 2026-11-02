@@ -14,6 +14,6 @@ Request: $ARGUMENTS
 - If the format is not given, call `list_catalog` and suggest the one that fits; default to a square post.
 - Think as the art director and the marketing consultant together: the brand's world, the audience, the message's job and the format (a story, a feed post, a wide ad and a thumbnail are different compositions, never one look stretched). For a visual without a photo, pass `direction`: the backdrop and why, where the copy sits (top, center, bottom) and whether the headline is set large, for that format; never one look by habit.
 - Every number and claim in the copy must come from what the user said. Ask for a missing price, date or booking channel instead of inventing one.
-- Pass the request above, verbatim, as `brief.request`; every figure on the visual is checked against it. A question the result asks is the user's to answer: never apply it yourself.
+- Pass the request above, verbatim, as `brief.request`; every figure on the visual is checked against it. A question the result asks is the user's to answer: never apply it yourself, and offer its wording and options exactly as given, never in your own words.
 - Never present a render that is not ready as finished.
 - The reply when it is ready: `🚀 Ready to publish · [Open visual ↗](<link>)`. If the result asks a question, ask it right after with AskUserQuestion; otherwise at most one short line with its direction. Never download or save the file; no tool call after the visual.
