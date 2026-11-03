@@ -15,7 +15,7 @@ Tell Claude what you want to promote. Marketing OS writes the copy, finds or use
 
 - **Only your facts.** Prices, dates and figures come from what you, your site or your product page say. Missing a fact? Claude asks one question instead of inventing it.
 - **No stock wording, no stock ideas.** Phrases every ad uses ("discover", "elevate", "keşfet") and clichéd scenes (handshakes, light bulbs) are rewritten before anything is drawn. Each visual starts from an idea, not just a picture of the obvious.
-- **Checked before you see it.** Text stays readable and in place, your subject is never covered or cropped away, and every visual is reviewed for stopping power, originality, message and type. When one still falls short, you get it with one concrete suggestion.
+- **Checked before you see it.** Text stays readable and in place, your subject is never covered or cropped away, and every visual is sent for review (stopping power, originality, message and type). You are told what each one is: ready, below the target (with one concrete suggestion), not fully reviewed (when the review could not complete, so its quality is unknown), not ready or failed. Ready means those checks passed, not that a person approved it.
 - **Your brand, every time.** Colors, fonts, logo and tone come from your brand card, so every visual looks like the same business.
 
 ## Install
