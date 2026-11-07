@@ -44,6 +44,8 @@ You can also just ask in plain words; the commands are shortcuts.
 | `/mos:campaign <goal>` | Three campaign ideas, checked as a set |
 | `/mos:formats` | Formats, channels, tones and copy limits |
 | `/mos:usage` | How much you have made today |
+| `/mos:status` | Where your last visual (or one you name) ended, and what it took |
+| `/mos:review` | The review your last visual (or one you name) got |
 
 After a visual you can say *"change the button text"*, *"another one"* or *"make it bolder"*.
 
