@@ -1,29 +1,30 @@
 ---
-description: Produce a finished ad drawn in one picture (scene and copy together) by the user's own ChatGPT, with the brand's logo set afterwards
-argument-hint: [what the ad is for, the message, format]
+description: Ask the studio for a finished ad drawn in one picture (scene and copy together), or fetch one that was asked for
+argument-hint: [what the ad is for and its message | a job id to fetch the finished design]
 ---
 
-Use the marketing-os tools and the browser tools (Claude in Chrome). Skip the strategist.
+Use the marketing-os tools. Skip the strategist.
 If the marketing-os tools are not available, the user has not signed in yet: tell them in one line to open /mcp, choose plugin:mos:marketing-os, press Authenticate and enter their access code, then start a new session. Do nothing else.
 
 Request: $ARGUMENTS
 
-This path makes the whole ad as one picture: the image model draws the scene and the copy together, and the server sets the brand's logo. The picture is made by the user's own signed-in ChatGPT in their Chrome, driven from here. Use it when the user asks for a design or a full ad; `/mos:visual` stays the way to set copy over a photo they already have.
+This path makes the whole ad as one picture: the scene and the copy are drawn together and the brand's logo is set on it. The picture is made in the studio, not in this session: you send the request, the studio makes the design in a few minutes, and the same command fetches it. Never make the picture yourself and never open an image service here. `/mos:visual` stays the way to set copy over a photo the user already has.
 
-1. **Brand.** Pass its name to the tools (`brand`) when the user names one; with one saved brand nothing is needed. Set a brand up only when it is not saved yet (its logo and colours come from its site).
+**When the request is a job id, or asks whether a design is ready:** call `design_status` with the id. Done: give the link and say in one line that the values shown on the screens in the scene are illustrative, not the user's data. Waiting or being made: say so in one line. Failed: give the reason as the result states it.
+
+**Otherwise, a new design:**
+
+1. **Brand.** Pass its name (`brand`) when the user names one; with one saved brand nothing is needed. Set a brand up only when it is not saved yet (its logo and colours come from its site).
 2. **Copy.** From the user's words only: a headline that carries the idea, with the one phrase that takes the brand's colour marked `[[...]]` (at most three words); a subline; a support line when their text has one. Every number must be one the user stated.
-3. **Scene.** Write the scene's content in the house style the `design_prompt` tool describes: the product at work as the hero (a screen with specific, plausible rows), two to five small cards that tell the message's sequence or contrast, the real place where the brand's customer works, one or two props. Never a metaphor, never one object on an empty ground. You give content only; the positions, the colour and the logo's empty corner are compiled by the tool.
-4. **Prompt.** Call `design_prompt`. If it answers "Not yet", fix what it names and call it again. Never edit the prompt it returns.
-5. **Make the picture.** In a new browser tab open `https://chatgpt.com/`. Clear the message box first (select all, delete): a restored draft mixes into what you type. Send the prompt as ONE message: a line break sends the message, so type it as the single paragraph it is, or save it to a `.txt` file, attach that file and send "Generate the image described in the attached file exactly as written. One image only." Attach the product photo when the result names one. Never attach a picture of someone else's work as a reference. If the browser tools are not available, give the user the prompt to paste into ChatGPT and ask for the picture back.
-6. **Download.** Before the first download of the conversation, ask the user (file, source); then save the picture with its share menu's Download.
-7. **Read it.** Look at the picture and read every line of the copy against `expect.copy`, word for word, punctuation and special letters included. A wrong or missing word: ask ChatGPT in the same chat for the same picture with that line corrected, at most twice; after that tell the user what is wrong and stop. Never repair a picture by hand.
-8. **Finish.** Upload the picture (`photo_upload`) and call `finish_design` with its `photoId` and `textChecked: true`.
+3. **Scene.** Write the scene's content in the house style the `design_request` tool describes: the product at work as the hero (a screen with specific, plausible rows), two to five small cards that tell the message's sequence or contrast, the real place where the brand's customer works, one or two props. Never a metaphor, never one object on an empty ground. You give content only; the positions, the colour and the logo's corner are set by the server.
+4. **Send.** Call `design_request`. If it answers "Not yet", fix what it names and call it again.
+5. **Reply** in one or two lines: the design is being made in the studio and takes a few minutes; the job id; and that `/mos:design <job id>` fetches it. Do not wait and do not call `design_status` in a loop.
 
-Write nothing to the user between tool calls. One short reply at the end: the link, one sentence on what was made, and one line that the values shown on the screens in the scene are illustrative, not the user's data. Every question to the user is multiple choice, asked with the AskUserQuestion tool.
+Write nothing to the user between tool calls. Every question to the user is multiple choice, asked with the AskUserQuestion tool.
 
 The shape of the call (an example; the user's words and your choices replace every value):
 
-<!-- design_prompt example -->
+<!-- design_request example -->
 ```json
 {
   "brand": "Fieldline",

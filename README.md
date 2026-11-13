@@ -79,7 +79,8 @@ You can also just ask in plain words; the commands are shortcuts.
 | `/mos:product:select <name or none>` | Work on a product, or on the brand as a whole |
 | `/mos:visual <what it is for>` | Make one visual: post, story, banner or thumbnail |
 | `/mos:text <channel and topic>` | Write a post or caption |
-| `/mos:design <what it is for>` | Make a finished ad drawn in one picture by your own ChatGPT (needs Claude in Chrome), with your logo set afterwards |
+| `/mos:design <what it is for>` | Ask the studio for a finished ad drawn in one picture, with your logo set on it; `/mos:design <job id>` fetches it a few minutes later |
+| `/mos:studio` | Studio only: make the waiting design jobs and hand them back |
 | `/mos:campaign <goal>` | Three campaign ideas, checked as a set |
 | `/mos:formats` | Formats, channels, tones and copy limits |
 | `/mos:usage` | How much you have made today |
