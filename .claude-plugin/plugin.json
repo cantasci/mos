@@ -63,6 +63,9 @@
     },
     "status": {
       "source": "./commands/status.md"
+    },
+    "design": {
+      "source": "./commands/design.md"
     }
   }
 }
