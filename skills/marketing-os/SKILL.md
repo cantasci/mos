@@ -5,6 +5,6 @@ description: Plan, write and produce on-brand marketing content for a small busi
 
 # Marketing OS
 
-Use the marketing-os tools and follow the instructions the marketing-os server gives.
+Use the marketing-os tools and follow the instructions the marketing-os server gives. Every reply follows the response standard in references/responses.md: the outcome in one line (ready, a preview, waiting for something from the user, or not made), the visual, one or two sentences, the post text, one next step; in the user's language, with nothing from the server's internals.
 
 If the marketing-os tools are not available, the user has not signed in yet: tell them in one line to open /mcp, choose plugin:mos:marketing-os, press Authenticate and enter their access code, then start a new session. Do nothing else.
