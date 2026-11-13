@@ -4,7 +4,7 @@
       "type": "http",
       "url": "${MOS_SERVER_URL:-https://mos-mcp.up.railway.app/mcp}",
       "headers": {
-        "X-Mos-Plugin-Version": "0.3.18"
+        "X-Mos-Plugin-Version": "0.3.19"
       }
     }
   }
