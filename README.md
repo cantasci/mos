@@ -20,12 +20,35 @@ Tell Claude what you want to promote. Marketing OS writes the copy, finds or use
 
 ## Install
 
+In the Claude Code terminal app:
+
 ```
 /plugin marketplace add cantasci/mos
 /plugin install mos@marketing-os
 ```
 
+In the VS Code extension, or anywhere `/plugin` is not available, run the same two steps in a terminal:
+
+```
+claude plugin marketplace add cantasci/mos
+claude plugin install mos@marketing-os
+```
+
 Then sign in once with your access code: run `/mcp`, choose **plugin:mos:marketing-os**, press **Authenticate**, enter the code on the page that opens, and start a new Claude Code session.
+
+Install the plugin only. Do not add the server yourself with `claude mcp add`: the plugin already connects to it, and a second entry with the same name stops sign-in.
+
+### Troubleshooting
+
+**"Couldn't start sign-in for marketing-os"**, or `marketing-os` shown as failed in `/mcp`: the server was also added by hand. The plugin's own entry is named `plugin:mos:marketing-os`; a plain `marketing-os` is the extra one.
+
+1. Remove it: `claude mcp remove marketing-os`
+2. Start a new Claude Code session.
+3. Run `/mcp`, choose **plugin:mos:marketing-os** and press **Authenticate**.
+
+**`/plugin` is not available:** use the `claude plugin` commands above in a terminal.
+
+**Commands are missing after an update:** run `claude plugin marketplace update marketing-os`, then `claude plugin update mos@marketing-os`, and start a new session.
 
 ## Commands
 
