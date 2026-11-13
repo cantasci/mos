@@ -17,8 +17,9 @@ This path makes the whole ad as one picture: the scene and the copy are drawn to
 1. **Brand.** Pass its name (`brand`) when the user names one; with one saved brand nothing is needed. Set a brand up only when it is not saved yet (its logo and colours come from its site).
 2. **Copy.** From the user's words only: a headline that carries the idea, with the one phrase that takes the brand's colour marked `[[...]]` (at most three words); a subline; a support line when their text has one. Every number must be one the user stated.
 3. **Scene.** Write the scene's content in the house style the `design_request` tool describes: the product at work as the hero (a screen with specific, plausible rows), two to five small cards that tell the message's sequence or contrast, the real place where the brand's customer works, one or two props. Never a metaphor, never one object on an empty ground. You give content only; the positions, the colour and the logo's corner are set by the server.
-4. **Send.** Call `design_request`. If it answers "Not yet", fix what it names and call it again.
-5. **Reply** in one or two lines: the design is being made in the studio and takes a few minutes; the job id; and that `/mos:design <job id>` fetches it. Do not wait and do not call `design_status` in a loop.
+4. **A photo, when the user gave one** (their product, their van, an installed unit): upload it with `photo_upload` and pass `photo` with its `id` and, in a few words, what it shows. It appears in the design as it is. Never invent a photo and never pass one the user did not give.
+5. **Send.** Call `design_request`. If it answers "Not yet", fix what it names and call it again.
+6. **Reply** in one or two lines: the design is being made in the studio and takes a few minutes; the job id; and that `/mos:design <job id>` fetches it. Do not wait and do not call `design_status` in a loop.
 
 Write nothing to the user between tool calls. Every question to the user is multiple choice, asked with the AskUserQuestion tool.
 
