@@ -4,7 +4,11 @@ argument-hint: [nothing | competitor names or links | what the posts should be a
 ---
 
 Use the marketing-os tools and your own web tools (web search and page fetch). Skip the strategist.
-If the marketing-os tools are not available, the user has not signed in yet: tell them in one line to open /mcp, choose plugin:mos:marketing-os, press Authenticate and enter their access code, then start a new session. Do nothing else.
+If the marketing-os tools are not among your tools, do not conclude that the user is signed out yet:
+1. When your tools are loaded on demand, search for them first (a tool search for "marketing-os"); found: carry on with the request.
+2. Not found, and a sign-in tool for this server is among your tools (its name ends in `marketing-os__authenticate`): call it yourself, give the user the sign-in link it returns in one line ("Open this link and enter your access code"), and once they have signed in carry on with the request they made.
+3. Neither: tell them in one line to open /mcp, choose plugin:mos:marketing-os, press Authenticate and enter their access code, and then send the same request again. Do nothing else.
+A tool that answers that today's images are used, or that something is not part of the plan: say exactly that in one line in the user's words, with when it resets, and do what can still be done without it (the post's text).
 
 Request: $ARGUMENTS
 
@@ -23,7 +27,7 @@ You read the competitors yourself; the server reads nothing and chooses nothing.
    - **The tags.** X two; LinkedIn and Instagram three to five. A mixed set, each with its kind: `topic` (the post's subject; for an event the tag that event itself uses, looked up with a web search, never guessed), `sector` (the trade the reader follows), `place` (when the post has one), `brand` (at most one). Never a competitor's name, never a tag made up from the headline.
    - **Check.** Call `check_text` with the text, `tags`, `brand` and the brief. If it fails, rewrite by its reason (at most twice). Its `post` is the text with the tags set under it: give that, as it is.
    - **The picture in words.** One sentence describing the finished design for readers who cannot see it (what is in the scene and the headline on it), for the platform's alt text field.
-9. **Reply once**, in the user's language, in this order: one line that the post is ready and for which platform; the design's link on its own line; the post text with its tags, as a quote; the alt text, on its own line with its label; one sentence on which gap it answers (without a claim about any one competitor: "none of the competitors you named shows this"); any competitor that could not be read. When the design is not finished after the wait, give the text and tags as ready and say that `/mos:image <job id>` fetches the picture. Ask for nothing at the end unless a fact is missing that the post needs (a date, a stand number).
+9. **Reply once**, in the user's language, in this order: one line that the post is ready and for which platform; the design's link on its own line (the picture itself is shown by the result, never embedded again); the post text with its tags, as a quote; the alt text, on its own line with its label; one sentence on which gap it answers (without a claim about any one competitor: "none of the competitors you named shows this"); any competitor that could not be read. When the design is not finished after the wait, give the text and tags as ready and say that `/mos:image <job id>` fetches the picture. Ask for nothing at the end unless a fact is missing that the post needs (a date, a stand number).
 
 Write nothing to the user between tool calls except the questions above. Never show the notes unless the user asks for them; when they do, list each competitor with what it says and the page it was read on.
 

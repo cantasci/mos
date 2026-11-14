@@ -4,7 +4,11 @@ argument-hint: [brand name]
 ---
 
 Use the marketing-os tools.
-If the marketing-os tools are not available, the user has not signed in yet: tell them in one line to open /mcp, choose plugin:mos:marketing-os, press Authenticate and enter their access code, then start a new session. Do nothing else.
+If the marketing-os tools are not among your tools, do not conclude that the user is signed out yet:
+1. When your tools are loaded on demand, search for them first (a tool search for "marketing-os"); found: carry on with the request.
+2. Not found, and a sign-in tool for this server is among your tools (its name ends in `marketing-os__authenticate`): call it yourself, give the user the sign-in link it returns in one line ("Open this link and enter your access code"), and once they have signed in carry on with the request they made.
+3. Neither: tell them in one line to open /mcp, choose plugin:mos:marketing-os, press Authenticate and enter their access code, and then send the same request again. Do nothing else.
+A tool that answers that today's images are used, or that something is not part of the plan: say exactly that in one line in the user's words, with when it resets, and do what can still be done without it (the post's text).
 
 Brand: $ARGUMENTS
 

@@ -4,7 +4,11 @@ argument-hint: [what the ad is for and its message | a job id to fetch the finis
 ---
 
 Use the marketing-os tools. Skip the strategist.
-If the marketing-os tools are not available, the user has not signed in yet: tell them in one line to open /mcp, choose plugin:mos:marketing-os, press Authenticate and enter their access code, then start a new session. Do nothing else.
+If the marketing-os tools are not among your tools, do not conclude that the user is signed out yet:
+1. When your tools are loaded on demand, search for them first (a tool search for "marketing-os"); found: carry on with the request.
+2. Not found, and a sign-in tool for this server is among your tools (its name ends in `marketing-os__authenticate`): call it yourself, give the user the sign-in link it returns in one line ("Open this link and enter your access code"), and once they have signed in carry on with the request they made.
+3. Neither: tell them in one line to open /mcp, choose plugin:mos:marketing-os, press Authenticate and enter their access code, and then send the same request again. Do nothing else.
+A tool that answers that today's images are used, or that something is not part of the plan: say exactly that in one line in the user's words, with when it resets, and do what can still be done without it (the post's text).
 
 Request: $ARGUMENTS
 
@@ -29,7 +33,7 @@ This path makes the whole ad as one picture, in one of four kinds (the product a
 6. **A photo, when the user gave one** (their product, their van, an installed unit): upload it with `photo_upload` and pass `photo` with its `id` and, in a few words, what it shows. It appears in the design as it is. Never invent a photo and never pass one the user did not give.
 7. **Send.** Call `design_request`. If it answers "Not yet", fix what it names and call it again.
 8. **Wait for it.** Call `design_status` with the job id and `wait: 50`. While it answers waiting or being made, call it again, up to twelve times (about ten minutes), writing nothing in between and showing the user no job id.
-9. **Reply once.** Done: the link, and one line that the values shown on the screens in the scene are illustrative, not the user's data. Failed: the reason as the result states it. Still not finished after the twelve calls: one line that the studio has not finished yet, with the job id and that `/mos:image <job id>` fetches it later.
+9. **Reply once.** Done: one line that the image is ready, the link on its own line, and one line that the values shown on the screens in the scene are illustrative, not the user's data. The picture itself is shown to the user by the last result: never embed it again and never describe it. Failed: the reason as the result states it. Still not finished after the twelve calls: one line that the studio has not finished yet, with the job id and that `/mos:image <job id>` fetches it later.
 
 Write nothing to the user between tool calls. Every question to the user is multiple choice, asked with the AskUserQuestion tool.
 
