@@ -8,6 +8,8 @@ If the marketing-os tools are not available, the user has not signed in yet: tel
 
 Request: $ARGUMENTS
 
+**Called with nothing (the request above is empty):** call no tool. Answer in one line, in the user's language, with what the command needs and one example (`/mos:image Instagram post for our free first class`), and stop.
+
 This path makes the whole ad as one picture, in one of four kinds (the product at work, a documentary moment, a before and after, a still life of the work's objects): the scene and the copy are drawn together and the brand's logo is set on it. The picture is made in the studio, not in this session: you send the request, wait while the studio makes it (a few minutes), and give the finished design. Never make the picture yourself and never open an image service here.
 
 **When the request is a job id, or asks whether a design is ready:** call `design_status` with the id. Done: give the link and say in one line that the values shown on the screens in the scene are illustrative, not the user's data. Waiting or being made: wait for it as in step 8. Failed: give the reason as the result states it.

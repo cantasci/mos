@@ -8,6 +8,8 @@ If the marketing-os tools are not available, the user has not signed in yet: tel
 
 Business: $ARGUMENTS
 
+**Called with nothing (the request above is empty):** call no tool. Answer in one line, in the user's language, with what the command needs and one example (`/mos:brand:new https://yourshop.com`), and stop.
+
 1. If `<a link to the business>` is given, call `derive_brand_card` with `url` and any values the user stated; the server reads the rest.
 2. Otherwise: if the name or what the business does is missing, ask for it in one question; call `list_catalog`, pick the tone that fits, and call `derive_brand_card`.
 3. Show the result in a few lines: name, colors, tone, and what was found on the link (facts, products). The new brand is now selected.
