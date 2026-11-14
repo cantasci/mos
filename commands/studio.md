@@ -27,6 +27,6 @@ For each job, until `design_next` says none is waiting (or the number in the req
 3. **Download** the picture with its share menu's Download.
 4. **Read it.** Look at the picture and read every line of the copy against the job's `expect.copy`, word for word, punctuation and special letters included. A wrong or missing word: ask in the same chat for the same picture with that line corrected, at most twice.
 5. **Hand it back.** Upload the picture (`photo_upload`) and call `design_deliver` with the job id, the `photoId` and `textChecked: true`. If the image service refuses, or the text stays wrong after two corrections, call `design_deliver` with the job id and `failed` (the reason in a few words) instead. Never deliver a picture with a wrong word and never repair one by hand.
-6. Close the tab.
+6. Close the tab. **A carousel is the exception:** when `design_next` says a job is a page of a carousel, keep the tab of its first page open and send each later page's prompt as the next message in that same conversation (clear the box first), so the scene stays the same; download each page from its own answer, and close the tab after the last page or when the next job is not of that carousel.
 
 Write nothing between tool calls: no narration, no plans, no notes on what you are about to do, and never repeat the prompt in your own text. At the end, one short reply: how many jobs were delivered, how many failed and why, and whether any are still waiting.
