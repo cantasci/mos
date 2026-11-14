@@ -7,7 +7,8 @@ Tell Claude what you want to promote. Marketing OS writes the copy, finds or use
 | You ask | You get |
 |---|---|
 | `/mos:brand:new https://yourshop.com` | A brand card read from your site: name, colors, logo, tone, the facts you state and your products |
-| `/mos:visual Instagram post for our free first class` | A finished 1080×1350 visual, saved as a PNG |
+| `/mos:design Instagram post for our free first class` | A finished ad drawn in one picture, with your logo set on it |
+| `/mos:ideas` | Four posts your competitors are not making, to pick from a list; the one you pick is made |
 | `/mos:text LinkedIn post about the new opening hours` | A post within LinkedIn's limits, with the hook above the "see more" fold |
 | `/mos:campaign more trial sign-ups in November` | Three campaign ideas, each for a different customer motivation |
 
@@ -77,9 +78,9 @@ You can also just ask in plain words; the commands are shortcuts.
 | `/mos:product:new <product page link>` | Add a product with its name, price and photo, and select it |
 | `/mos:products` | List the selected brand's products |
 | `/mos:product:select <name or none>` | Work on a product, or on the brand as a whole |
-| `/mos:visual <what it is for>` | Make one visual: post, story, banner or thumbnail |
 | `/mos:text <channel and topic>` | Write a post or caption |
 | `/mos:design <what it is for>` | Ask the studio for a finished ad drawn in one picture, with your logo set on it; `/mos:design <job id>` fetches it a few minutes later |
+| `/mos:ideas <competitors, or nothing>` | Read your competitors, propose four posts they are not making, and make the one you pick from the list |
 | `/mos:studio` | Studio only: make the waiting design jobs and hand them back |
 | `/mos:campaign <goal>` | Three campaign ideas, checked as a set |
 | `/mos:formats` | Formats, channels, tones and copy limits |
