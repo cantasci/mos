@@ -10,7 +10,6 @@ Tell Claude what you want to promote. Marketing OS writes the copy, finds or use
 | `/mos:design Instagram post for our free first class` | A finished ad drawn in one picture, with your logo set on it |
 | `/mos:ideas` | Four posts your competitors are not making, to pick from a list; the one you pick is made |
 | `/mos:text LinkedIn post about the new opening hours` | A post within LinkedIn's limits, with the hook above the "see more" fold |
-| `/mos:campaign more trial sign-ups in November` | Three campaign ideas, each for a different customer motivation |
 
 ## What makes it different
 
@@ -75,18 +74,11 @@ You can also just ask in plain words; the commands are shortcuts.
 | `/mos:brand:new <link or description>` | Set up a brand from its website or shop link, or from a name and one sentence |
 | `/mos:brands` | List your brands (the selected one is marked) |
 | `/mos:brand:select <name>` | Work on another brand |
-| `/mos:product:new <product page link>` | Add a product with its name, price and photo, and select it |
-| `/mos:products` | List the selected brand's products |
-| `/mos:product:select <name or none>` | Work on a product, or on the brand as a whole |
 | `/mos:text <channel and topic>` | Write a post or caption |
 | `/mos:design <what it is for>` | Ask the studio for a finished ad drawn in one picture, with your logo set on it; `/mos:design <job id>` fetches it a few minutes later |
 | `/mos:ideas <competitors, or nothing>` | Read your competitors, propose four posts they are not making, and make the one you pick from the list |
 | `/mos:studio` | Studio only: make the waiting design jobs and hand them back |
-| `/mos:campaign <goal>` | Three campaign ideas, checked as a set |
-| `/mos:formats` | Formats, channels, tones and copy limits |
 | `/mos:usage` | How much you have made today |
-| `/mos:status` | Where your last visual (or one you name) ended, and what it took |
-| `/mos:review` | The review your last visual (or one you name) got |
 
 After a visual you can say *"change the button text"*, *"another one"* or *"make it bolder"*.
 

@@ -1,6 +1,6 @@
 {
   "name": "mos",
-  "version": "0.3.32",
+  "version": "0.3.33",
   "description": "On-brand marketing visuals and posts for small businesses: ad visuals, social posts and stories, banners, thumbnails, captions, LinkedIn and X posts. Copy uses only your facts, and every visual is checked and sent for review, and you are told whether it is ready, below the target, not fully reviewed, not ready or failed.",
   "author": {
     "name": "Can Tasci",
@@ -20,55 +20,42 @@
   ],
   "commands": {
     "brands": {
-      "source": "./commands/brands-list.md"
-    },
-    "brands:list": {
-      "source": "./commands/brands-list.md"
+      "source": "./commands/brands-list.md",
+      "description": "List your brands; the selected one is marked"
     },
     "brand:new": {
-      "source": "./commands/brand-new.md"
+      "source": "./commands/brand-new.md",
+      "description": "Set up a brand from its site link or a short description",
+      "argumentHint": "[link to the business, or name and a short description]"
     },
     "brand:select": {
-      "source": "./commands/brand-select.md"
-    },
-    "products": {
-      "source": "./commands/products-list.md"
-    },
-    "products:list": {
-      "source": "./commands/products-list.md"
-    },
-    "product:new": {
-      "source": "./commands/product-new.md"
-    },
-    "product:select": {
-      "source": "./commands/product-select.md"
-    },
-    "text": {
-      "source": "./commands/text.md"
-    },
-    "campaign": {
-      "source": "./commands/campaign.md"
-    },
-    "formats": {
-      "source": "./commands/formats.md"
-    },
-    "usage": {
-      "source": "./commands/usage.md"
-    },
-    "review": {
-      "source": "./commands/review.md"
-    },
-    "status": {
-      "source": "./commands/status.md"
+      "source": "./commands/brand-select.md",
+      "description": "Choose which saved brand to work on",
+      "argumentHint": "[brand name]"
     },
     "design": {
-      "source": "./commands/design.md"
+      "source": "./commands/design.md",
+      "description": "A finished ad in one picture with your logo, or fetch one by its job id",
+      "argumentHint": "[what the ad is for and its message | a job id to fetch the finished design]"
     },
     "ideas": {
-      "source": "./commands/ideas.md"
+      "source": "./commands/ideas.md",
+      "description": "Four post ideas your competitors are not making; pick one and get the whole post",
+      "argumentHint": "[nothing | competitor names or links | what the posts should be about]"
+    },
+    "text": {
+      "source": "./commands/text.md",
+      "description": "Write a text post or caption (LinkedIn, X, Instagram, YouTube)",
+      "argumentHint": "[channel and what the post is about]"
+    },
+    "usage": {
+      "source": "./commands/usage.md",
+      "description": "Your plan and how much of today's limit is used"
     },
     "studio": {
-      "source": "./commands/studio.md"
+      "source": "./commands/studio.md",
+      "description": "Studio only: make the waiting design jobs and hand them back",
+      "argumentHint": "[nothing | how many jobs to make | id]"
     }
   }
 }

@@ -1,12 +1,9 @@
----
-description: Propose three campaign concepts and check whether the set is publishable
-argument-hint: [goal of the campaign, offer, available photos]
----
+# Campaign ideas (three concepts, checked as a set)
 
 Use the marketing-os tools.
 If the marketing-os tools are not available, the user has not signed in yet: tell them in one line to open /mcp, choose plugin:mos:marketing-os, press Authenticate and enter their access code, then start a new session. Do nothing else.
 
-Request: $ARGUMENTS
+The request is what the user asked for.
 
 - The brand: use the one the user names or the selected one; set a brand up only when it is not saved yet. No separate `select` call when a tool takes the brand by name.
 - Every question to the user is multiple choice: ask it with the AskUserQuestion tool (2-4 short options, the recommended one first; the options a result gives when it has them), never in plain text. Then carry on with the answer.
