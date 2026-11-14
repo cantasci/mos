@@ -1,0 +1,56 @@
+{
+  "name": "mos",
+  "version": "0.4.0",
+  "description": "Finished ads in your brand from a short request: one picture with your copy, your colours and your logo, plus social posts and captions. Copy uses only your facts, and every word in the picture is read back.",
+  "author": {
+    "name": "Can Tasci",
+    "url": "https://github.com/cantasci"
+  },
+  "homepage": "https://github.com/cantasci/mos#readme",
+  "repository": "https://github.com/cantasci/mos",
+  "keywords": [
+    "marketing",
+    "social-media",
+    "ad-creative",
+    "instagram",
+    "linkedin",
+    "small-business",
+    "branding",
+    "copywriting"
+  ],
+  "commands": {
+    "image": {
+      "source": "./commands/image.md",
+      "description": "An image for a post, an ad, a thumbnail or a story, with your logo; or fetch one by its job id",
+      "argumentHint": "[what the ad is for and its message | a job id to fetch the finished design]"
+    },
+    "ideas": {
+      "source": "./commands/ideas.md",
+      "description": "Four post ideas your competitors are not making; pick one and get the whole post",
+      "argumentHint": "[nothing | competitor names or links | what the posts should be about]"
+    },
+    "text": {
+      "source": "./commands/text.md",
+      "description": "Write a text post or caption (LinkedIn, X, Instagram, YouTube)",
+      "argumentHint": "[channel and what the post is about]"
+    },
+    "brands": {
+      "source": "./commands/brands-list.md",
+      "description": "List your brands; the selected one is marked"
+    },
+    "brand:new": {
+      "source": "./commands/brand-new.md",
+      "description": "Set up a brand from its site link or a short description",
+      "argumentHint": "[link to the business, or name and a short description]"
+    },
+    "brand:select": {
+      "source": "./commands/brand-select.md",
+      "description": "Choose which saved brand to work on",
+      "argumentHint": "[brand name]"
+    },
+    "usage": {
+      "source": "./commands/usage.md",
+      "description": "Your plan and how much of today's limit is used"
+    }
+  }
+}

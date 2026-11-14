@@ -1,0 +1,33 @@
+{
+  "name": "marketing-os",
+  "owner": {
+    "name": "Can Tasci",
+    "url": "https://github.com/cantasci"
+  },
+  "metadata": {
+    "description": "Marketing OS: finished, on-brand ads and posts for small businesses, from a short request.",
+    "version": "0.4.0"
+  },
+  "plugins": [
+    {
+      "name": "mos",
+      "source": "./",
+      "description": "Finished ads in your brand, social posts and captions, from a short request. Only your facts, and every word in the picture is read back.",
+      "version": "0.4.0",
+      "author": {
+        "name": "Can Tasci",
+        "url": "https://github.com/cantasci"
+      },
+      "homepage": "https://github.com/cantasci/mos#readme",
+      "repository": "https://github.com/cantasci/mos",
+      "category": "marketing",
+      "keywords": [
+        "marketing",
+        "social-media",
+        "ad-creative",
+        "small-business",
+        "branding"
+      ]
+    }
+  ]
+}

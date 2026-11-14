@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "marketing-os": {
+      "url": "https://mos-mcp.up.railway.app/mcp"
+    }
+  }
+}
