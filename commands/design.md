@@ -15,7 +15,7 @@ This path makes the whole ad as one picture: the scene and the copy are drawn to
 **Otherwise, a new design:**
 
 1. **Brand.** Pass its name (`brand`) when the user names one; with one saved brand nothing is needed. Set a brand up only when it is not saved yet (its logo and colours come from its site).
-2. **Copy.** From the user's words only: a headline that carries the idea, with the one phrase that takes the brand's colour marked `[[...]]` (at most three words); a subline; a support line when their text has one. Every number must be one the user stated.
+2. **Copy.** From the user's words only: a headline that carries the idea, with the one phrase that takes the brand's colour marked `[[...]]` (at most three words); a subline; a support line when their text has one. Each line is one plain, complete sentence or phrase: no "X. Not Y." contrast, no colon reveal, no question answered by itself, no stacked two-word fragments, no stock AI wording; the server refuses these. Every number must be one the user stated.
 3. **Scene.** Write the scene's content in the house style the `design_request` tool describes: the product at work as the hero (a screen with specific, plausible rows), two to five small cards that tell the message's sequence or contrast, the real place where the brand's customer works, one or two props. Never a metaphor, never one object on an empty ground. You give content only; the positions, the colour and the logo's corner are set by the server.
 4. **A photo, when the user gave one** (their product, their van, an installed unit): upload it with `photo_upload` and pass `photo` with its `id` and, in a few words, what it shows. It appears in the design as it is. Never invent a photo and never pass one the user did not give.
 5. **Send.** Call `design_request`. If it answers "Not yet", fix what it names and call it again.
@@ -31,7 +31,7 @@ The shape of the call (an example; the user's words and your choices replace eve
   "brand": "Fieldline",
   "format": "instagram_square",
   "slots": {
-    "headline": "Completed is a status. [[Not the proof.]]",
+    "headline": "Every completed job keeps [[its proof]].",
     "subline": "A completed job needs more than a status update.",
     "support": "Photos, timestamps and signatures stay connected to every work order."
   },
