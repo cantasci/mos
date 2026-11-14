@@ -47,13 +47,13 @@ const strict = (s) => {
 };
 const ajv = new Ajv({ strict: false, allErrors: true });
 
-// The examples: the commands, and the skill's references (render_visual's call lives there since /mos:visual left the list).
+// The examples: the commands, and the skill's references (the product and format flows live there since they left the list).
 const DIRS = ['commands', path.join('skills', 'marketing-os', 'references')];
 const examples = DIRS.flatMap((d) => fs.readdirSync(path.join(ROOT, d)).filter((f) => f.endsWith('.md')).map((f) => [d, f])).flatMap(([d, f]) => {
   const text = fs.readFileSync(path.join(ROOT, d, f), 'utf8');
   return [...text.matchAll(/<!--\s*([a-z_]+) example\s*-->\s*```json\n([\s\S]*?)```/g)].map((m) => ({ file: f, tool: m[1], body: m[2] }));
 });
-check('the examples include the render_visual call (references/visual.md)', examples.some((e) => e.file === 'visual.md' && e.tool === 'render_visual'), examples.map((e) => `${e.file}:${e.tool}`).join(', '));
+check('the examples include the design_request call (commands/image.md)', examples.some((e) => e.file === 'image.md' && e.tool === 'design_request'), examples.map((e) => `${e.file}:${e.tool}`).join(', '));
 for (const e of examples) {
   let payload = null;
   try { payload = JSON.parse(e.body); } catch (err) { check(`${e.file} ${e.tool}: the example is JSON`, false, err.message); continue; }
@@ -62,13 +62,8 @@ for (const e of examples) {
   const validate = ajv.compile(strict(schema));
   check(`${e.file} ${e.tool}: the example matches the schema the server runs (${from}), without the legacy forms`, validate(payload), JSON.stringify(validate.errors || []).slice(0, 400));
 }
-// The legacy forms fail here (the check above is not vacuous).
-{
-  const validate = ajv.compile(strict(schemaOf('render_visual')));
-  const base = { format: 'instagram_post', brief: { facts: ['x'] } };
-  const bad = [['a figure as a string', { ...base, brief: { facts: ['x'], figures: ['97% forecast accuracy'] } }], ['a figure without its label', { ...base, brief: { facts: ['x'], figures: [{ value: '97%' }] } }], ['a direction in prose', { ...base, direction: 'a calm backdrop' }]];
-  for (const [what, p] of bad) check(`render_visual: ${what} is refused`, !validate(p), '');
-}
+// The check above is not vacuous: a design with no scene is refused.
+check('design_request: a call without a scene is refused', !ajv.compile(strict(schemaOf('design_request')))({ format: 'instagram_square', slots: { headline: 'A headline' } }), '');
 
 for (const x of results) console.log(`${x.ok ? 'PASS' : 'FAIL'}  ${x.name}  (${x.detail.slice(0, 400)})`);
 console.log(`${results.filter((x) => x.ok).length}/${results.length} passed`);

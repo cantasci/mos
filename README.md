@@ -2,12 +2,12 @@
 
 **On-brand marketing visuals and posts for small businesses, made from a short request in Claude Code.**
 
-Tell Claude what you want to promote. Marketing OS writes the copy, finds or uses the right photo, lays out the visual in your brand's colors and type, checks it, and saves a ready-to-post PNG in your project folder.
+Tell Claude what you want to promote. Marketing OS writes the copy, has the whole ad drawn as one picture in your brand's colors, sets your logo on it and gives you the finished image with its post text and tags.
 
 | You ask | You get |
 |---|---|
 | `/mos:brand:new https://yourshop.com` | A brand card read from your site: name, colors, logo, tone, the facts you state and your products |
-| `/mos:design Instagram post for our free first class` | A finished ad drawn in one picture, with your logo set on it |
+| `/mos:image Instagram post for our free first class` | A finished ad drawn in one picture, with your logo set on it |
 | `/mos:ideas` | Four posts your competitors are not making, to pick from a list; the one you pick is made |
 | `/mos:text LinkedIn post about the new opening hours` | A post within LinkedIn's limits, with the hook above the "see more" fold |
 
@@ -75,16 +75,16 @@ You can also just ask in plain words; the commands are shortcuts.
 | `/mos:brands` | List your brands (the selected one is marked) |
 | `/mos:brand:select <name>` | Work on another brand |
 | `/mos:text <channel and topic>` | Write a post or caption |
-| `/mos:design <what it is for>` | Ask the studio for a finished ad drawn in one picture, with your logo set on it; `/mos:design <job id>` fetches it a few minutes later |
+| `/mos:image <what it is for>` | Ask the studio for a finished ad drawn in one picture, with your logo set on it; `/mos:image <job id>` fetches it a few minutes later |
 | `/mos:ideas <competitors, or nothing>` | Read your competitors, propose four posts they are not making, and make the one you pick from the list |
 | `/mos:studio` | Studio only: make the waiting design jobs and hand them back |
 | `/mos:usage` | How much you have made today |
 
-After a visual you can say *"change the button text"*, *"another one"* or *"make it bolder"*.
+After an image you can ask for another one in plain words.
 
 ## What it makes
 
-**Visuals:** Instagram post (1080×1350) and square (1080×1080), story and story ad (1080×1920), LinkedIn post (1200×1200) and company cover (1128×191), display banner (1200×628), YouTube thumbnail (1280×720) and channel banner (2560×1440).
+**Images:** Instagram post (4:5) and square, LinkedIn post (square), a post for X (square), YouTube thumbnail (16:9), and a vertical frame for a story or TikTok (9:16). Each is one picture in one of four kinds: your product at work, a documentary moment, a before and after, a still life of the work's objects. Banners and covers are not made.
 
 **Text:** X posts, LinkedIn posts, Instagram captions, YouTube titles and descriptions, each within the channel's length, hashtag and "see more" limits.
 
@@ -92,11 +92,7 @@ After a visual you can say *"change the button text"*, *"another one"* or *"make
 
 ## Photos
 
-- **Your own photos** are used as they are: attach one in Claude Code, or give a link.
-- **A product's photo** is used automatically when a product is selected.
-- **No photo?** A photo that fits the idea is found for you. It sets the mood only and is never presented as your own product, staff or premises.
-
-Finished visuals are saved in your project under `mos-renders/<brand>/`.
+A photo you give (your product, your van, an installed unit) appears in the image as it is: attach it in Claude Code. Nothing is presented as your product, staff or premises unless you gave it.
 
 ## Updates
 

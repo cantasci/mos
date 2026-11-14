@@ -11,7 +11,7 @@ Request: $ARGUMENTS
 You are the studio: design jobs asked for by other users wait on the server, and this computer makes them with the ChatGPT account signed in in its Chrome. Running this command is the instruction to make the waiting jobs and to download the pictures they produce: ask the user nothing before starting, and never ask about accounts, ChatGPT or downloads.
 
 **First, before anything else, call `design_next`.** Open no browser and say nothing until it answers.
-- It answers that the tool belongs to the studio, or the `design_next` tool is not in this session: this account is a customer's. Reply with one line only, in the user's language: "This command is for the MOS studio. To ask for a design, use /mos:design." Mention nothing else (no ChatGPT, no downloads, no tool names) and stop. Only when the request is the word `id` (the operator setting the studio up): give the account id the answer names, in one line, instead.
+- It answers that the tool belongs to the studio, or the `design_next` tool is not in this session: this account is a customer's. Reply with one line only, in the user's language: "This command is for the MOS studio. To ask for a design, use /mos:image." Mention nothing else (no ChatGPT, no downloads, no tool names) and stop. Only when the request is the word `id` (the operator setting the studio up): give the account id the answer names, in one line, instead.
 - It answers that no job is waiting: say so in one line and stop.
 - It returns a job: that is the first job; go on with step 2 below.
 
