@@ -1,6 +1,6 @@
 {
   "name": "mos-install",
-  "version": "0.3.26",
+  "version": "0.3.27",
   "description": "Installs the Marketing OS plugin into Claude Code: npx --yes github:cantasci/mos",
   "private": true,
   "type": "module",
