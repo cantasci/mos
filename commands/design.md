@@ -8,9 +8,9 @@ If the marketing-os tools are not available, the user has not signed in yet: tel
 
 Request: $ARGUMENTS
 
-This path makes the whole ad as one picture: the scene and the copy are drawn together and the brand's logo is set on it. The picture is made in the studio, not in this session: you send the request, the studio makes the design in a few minutes, and the same command fetches it. Never make the picture yourself and never open an image service here. `/mos:visual` stays the way to set copy over a photo the user already has.
+This path makes the whole ad as one picture: the scene and the copy are drawn together and the brand's logo is set on it. The picture is made in the studio, not in this session: you send the request, wait while the studio makes it (a few minutes), and give the finished design. Never make the picture yourself and never open an image service here. `/mos:visual` stays the way to set copy over a photo the user already has.
 
-**When the request is a job id, or asks whether a design is ready:** call `design_status` with the id. Done: give the link and say in one line that the values shown on the screens in the scene are illustrative, not the user's data. Waiting or being made: say so in one line. Failed: give the reason as the result states it.
+**When the request is a job id, or asks whether a design is ready:** call `design_status` with the id. Done: give the link and say in one line that the values shown on the screens in the scene are illustrative, not the user's data. Waiting or being made: wait for it as in step 6. Failed: give the reason as the result states it.
 
 **Otherwise, a new design:**
 
@@ -19,7 +19,8 @@ This path makes the whole ad as one picture: the scene and the copy are drawn to
 3. **Scene.** Write the scene's content in the house style the `design_request` tool describes: the product at work as the hero (a screen with specific, plausible rows), two to five small cards that tell the message's sequence or contrast, the real place where the brand's customer works, one or two props. Never a metaphor, never one object on an empty ground. You give content only; the positions, the colour and the logo's corner are set by the server.
 4. **A photo, when the user gave one** (their product, their van, an installed unit): upload it with `photo_upload` and pass `photo` with its `id` and, in a few words, what it shows. It appears in the design as it is. Never invent a photo and never pass one the user did not give.
 5. **Send.** Call `design_request`. If it answers "Not yet", fix what it names and call it again.
-6. **Reply** in one or two lines: the design is being made in the studio and takes a few minutes; the job id; and that `/mos:design <job id>` fetches it. Do not wait and do not call `design_status` in a loop.
+6. **Wait for it.** Call `design_status` with the job id and `wait: 50`. While it answers waiting or being made, call it again, up to twelve times (about ten minutes), writing nothing in between and showing the user no job id.
+7. **Reply once.** Done: the link, and one line that the values shown on the screens in the scene are illustrative, not the user's data. Failed: the reason as the result states it. Still not finished after the twelve calls: one line that the studio has not finished yet, with the job id and that `/mos:design <job id>` fetches it later.
 
 Write nothing to the user between tool calls. Every question to the user is multiple choice, asked with the AskUserQuestion tool.
 
